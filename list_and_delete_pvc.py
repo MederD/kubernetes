@@ -18,7 +18,6 @@ if ns is None:
 config.load_kube_config()
 
 v1 = client.CoreV1Api()
-body = client.V1DeleteOptions()
 
 pvcs = v1.list_namespaced_persistent_volume_claim(namespace=ns, watch=False)
 print("---- PVCs ---")
